@@ -26,3 +26,42 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/memebot:latest
+            - name: lines-of-code-reporter
+  
+  ############################## NEW SECTION #######################################
+  # You may pin to the exact commit or the version.
+  # uses: PavanMudigonda/lines-of-code-reporter@6c5507f592136d1c05cb1e8c30889dc4eb5561f5
+  uses: PavanMudigonda/lines-of-code-reporter@v1.6
+  with:
+    # Path to the Directory(s) where Calculation below which calculation needs to run.
+Defaults to github workspace.
+Comma separated allowed currently. 
+
+    directory: # optional, default is ${{ github.workspace }}
+    # directories to be excluded. Comma separated allowed currently
+Defaults to a dummy value to avoid errors
+Comma separated allowed currently. 
+
+    exclude_dir: # optional, default is .git
+    # languages to be excluded. 
+Comma separated allowed currently. 
+
+    exclude_lang: # optional
+    # extensions to be excluded. 
+Comma separated allowed currently. 
+
+    exclude_ext: # optional
+    # languages to be included. Comma separated allowed currently.
+
+    include_lang: # optional
+    # extensions to be included. Comma separated allowed currently.
+
+    include_ext: # optional
+    # GITHUB_TOKEN to authenticate against API calls to attach
+report to Workflow Run.
+
+    github_token: # optional, default is ${{ github.token }}
+    # If true, will skip attaching the Tests Result report to
+the Workflow Run using a Check Run. 
+
+    skip_check_run: # optional
