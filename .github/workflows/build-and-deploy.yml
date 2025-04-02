@@ -40,11 +40,11 @@ jobs:
       - name: Lines of Code Reporter
         uses: PavanMudigonda/lines-of-code-reporter@v1.6
         with:
-          directory: ${{ github.workspace }} # Optional, defaults to workspace
-          exclude_dir: .git,node_modules,vendor # Optional, exclude unnecessary directories
-          exclude_lang: # Optional, specify languages to exclude
-          exclude_ext: # Optional, specify extensions to exclude
-          include_lang: # Optional, specify languages to include
-          include_ext: # Optional, specify extensions to include
+          directory: ${{ github.workspace }} # Optional: Defaults to workspace
+          exclude_dir: .git,node_modules,vendor # Exclude unnecessary directories
+          exclude_lang: # Optional: Specify languages to exclude
+          exclude_ext: # Optional: Specify extensions to exclude
+          include_lang: # Optional: Specify languages to include
+          include_ext: # Optional: Specify extensions to include
           github_token: ${{ secrets.GITHUB_TOKEN }} # Required for authentication
-          skip_check_run: false # Optional, set to true to disable check runs
+          skip_check_run: false # Optional: Set to true to disable check runs
